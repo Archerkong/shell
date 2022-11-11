@@ -1,0 +1,5 @@
+input
+
+useradd cent && echo "123" | passwd --stdin cent
+echo-e 'Defaults:cent !requiretty\ncent ALL = (root) NOPASSWD:ALL' | tee /etc/sudoers.d/ceph
+chmod440 /etc/sudoers.d/ceph
